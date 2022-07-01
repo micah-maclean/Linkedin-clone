@@ -21,7 +21,6 @@ a{
 
 .lighter {
     color: rgba(24, 24, 24, 0.2);
-    ;
 }
 
 .green {
@@ -29,34 +28,40 @@ a{
 }
 
 header {
-    background-color: aqua;
-    padding: 0 40px;
+    /* header flex */
     display: flex;
-    gap: 16px;
     align-items: center;
-    /* justify-content: space-between; */
-    height: 80px;
+    justify-content: flex-start;
 
+    /* header font */
     font-size: 12px;
-    text-transform: uppercase;
     font-weight: bold;
+    background-color: white;
+    text-transform: uppercase;
     line-height: 11.48px;
+    
+    /* header size */
+    height: 80px;
 }
 
 header > * {
+    /* header items flex */
     display: flex;
     align-items: center;
+
+    /* header items size */
     height: 80px;
-    border-right: 3px solid red;
-    margin: auto 0;
+
+    border-right: 1px solid #F4F4F4;
+}
+
+header > a {
+    padding: 0 40px;
 }
 
 header ul{
     display: flex;
-}
-
-header > a {
-    padding-right: 44px;
+    padding: 0 20px;
 }
 
 header ul li a {
@@ -103,6 +108,7 @@ header > div:first-of-type {
     gap: 15px;
     width: 330px;
     height: 80px;
+    padding: 0 30px;
 }
 
 header > div:first-of-type > img {
@@ -119,5 +125,12 @@ header > div:first-of-type > div {
 header > div:last-of-type {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
 }
 
+header > div:last-of-type > img {
+    width: 24px;
+    height: 24px;
+}
