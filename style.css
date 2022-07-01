@@ -134,3 +134,121 @@ header > div:last-of-type > img {
     width: 24px;
     height: 24px;
 }
+
+/* Footer */
+
+footer {
+    background: #F7F9FB;
+    bottom: 0;
+    display: flex;
+    gap: 65px;
+    height: 215px;
+    padding: 35px 130px 0 130px;
+    position: absolute;
+    width: 100vw;
+}
+
+footer div:first-child p{
+    color: #181818;
+    font-size: 14px;
+    margin-top: 12px;
+    line-height: 150%;
+    font-weight: bold;
+}
+
+footer div:first-child span {
+    color: #0275B1;
+}
+
+footer div:nth-child(2) span {
+    color: #181818;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 11px;
+}
+
+footer div:nth-child(2) nav {
+    display: flex;
+    gap: 100px;
+}
+
+footer div:nth-child(2) nav ul{
+    color: #181818;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    gap: 15px;
+    line-height: 11px;
+    margin-top: 30px;
+}
+
+footer div:last-of-type {
+    display: flex;
+    flex-direction: column;
+}
+
+footer div:last-of-type span, footer form label{
+    color: #181818;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 11px;
+    margin-bottom: 25px;
+}
+
+footer div:last-of-type div button {
+    box-sizing: border-box;
+    border: 1px solid #0275B1;
+    border-radius: 4px;
+    color: #0275B1;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 11px;
+    padding-left: 15px;
+    text-align: left;
+    width: 170px;
+}
+
+footer div:last-of-type div:first-of-type button:first-of-type {
+    background: #0275B1;
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer div:last-of-type div {
+    display: flex;
+    flex-direction: row;
+}
+
+footer div:last-of-type div img {
+    cursor: pointer;
+    height: 16px;
+    margin: 8px 0 8px -30px;
+    width: 16px;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer form select {
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    border-radius: 4px;
+    color: #181818;
+    cursor: pointer;
+    font-size: 12px;
+    height: 32px;
+    line-height: 11px;
+    padding-left: 15px;
+    padding-right: 18px;
+    width: 270px;
+}
+
+footer form select:focus {
+    border: 1px solid #0275B1;
+    outline: none;
+}
