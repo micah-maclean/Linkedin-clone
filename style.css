@@ -57,6 +57,7 @@ header > * {
 
 header > a {
     padding: 0 40px;
+    /* width: 130px;    */
 }
 
 header ul{
@@ -83,13 +84,19 @@ header ul li a img {
 header form {
     display: flex;
     align-items: center;
+    height: 80px;
+    width: 367px;
 }
 
 header form input {
-    height: 80px;
-    width: 367px;
     border: none;
-    padding-left: 74px;
+    height: 100%;
+    padding-left: 70px;
+    width: 100%;
+}
+
+header form input::placeholder {
+    color: #CECECE
 }
 
 header form input:focus {
@@ -97,8 +104,8 @@ header form input:focus {
 }
 
 header form img {
-    position: relative;
-    margin-right: -53px;
+    position: absolute;
+    margin: 0 25px 0 33px;
 }
 
 header > div:first-of-type {
@@ -128,6 +135,14 @@ header > div:last-of-type {
     align-items: center;
     justify-content: center;
     width: 90px;
+}
+
+header > div:first-of-type  .lighter {
+    margin-left: 10px;
+}
+
+header > div:last-of-type {
+    cursor: pointer;
 }
 
 header > div:last-of-type > img {
