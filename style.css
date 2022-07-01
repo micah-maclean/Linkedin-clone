@@ -27,6 +27,35 @@ a{
    color: #02B033;
 }
 
+
+
+.container {
+    display: grid;
+    grid-template-columns: 850px 290px;
+    gap: 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.button-md {
+    border: 1px solid #0275B1;
+    border-radius: 4px;
+    color: #0275B1;
+    background-color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 11px;
+    text-align: center;
+    width: 170px;
+}
+
+.contact-button {
+    background: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
+    color: white;
+}
+
 header {
     /* header flex */
     display: flex;
@@ -266,4 +295,90 @@ footer form select {
 footer form select:focus {
     border: 1px solid #0275B1;
     outline: none;
+}
+
+/* Profile */
+main {
+    /* background-color: #0275B1; */
+}
+
+main > * {
+    border-radius: 4px;
+    box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
+    margin-bottom: 30px;
+}
+
+.profile > div:first-child{
+    background: url(./images/backgroundProfile.png);
+    width: 100%;
+    height: 180px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.profile > div:first-child > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile > div:first-child button {
+    height: 36px;
+    padding: 12px;
+}
+
+.profile > div:nth-child(2) {
+    display: flex;
+    gap: 24px;
+    height: 180px;
+    padding: 24px;
+    background-color: white;
+}
+
+.profile > div:nth-child(2) img{
+    height: 170px;
+    width: 170px;
+    margin-top: -44px;
+}
+
+.profile > div:nth-child(2) > div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.profile > div:nth-child(2) > div > div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile > div:nth-child(2) > div > div:first-child > h1::after{
+    content: '';
+    display: inline-block;
+    background: center url(./images/logoGolden.png);
+    background-size: 16px;
+    height: 16px;
+    width: 16px;
+    margin-left: 8px;
+}
+
+.profile > div:nth-child(2) > div > div:first-child > span {
+    display: flex;
+    align-items: center;
+}
+
+.profile > div:nth-child(2) > div > div:first-child > span::before {
+    content: '';
+    display: inline-block;
+    background: center url(./images/location.png);
+    /* color: linear-gradient(180deg, #D8C281 0%, #AC9B69 100%); */
+    background-size: 16px;
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
 }
