@@ -21,6 +21,16 @@ a{
     text-decoration: none;
 }
 
+h2 {
+    font-size: 14px;
+}
+
+small {
+    font-size: 10px;
+    color:#181818;
+    line-height: 15px;
+}
+
 .lighter {
     color: rgba(24, 24, 24, 0.2);
 }
@@ -412,4 +422,33 @@ main > * {
     height: 200px;
     padding: 36px 30px;
     width: 100%;
+}
+
+/* projects */
+
+.projects {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px;
+}
+
+.projects div:first-child {
+    font-size: 18px;
+}
+
+.projects div:first-child span {
+    color: #747474;
+    margin-left: 16px;
+}
+
+.projects > div:nth-child(2){
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.projects > div:nth-child(2) img{
+    margin-bottom: 15px;
 }
