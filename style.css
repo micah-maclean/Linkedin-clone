@@ -17,12 +17,21 @@ ul{
 
 a{
     color: #0275B1;
-    width: fit-content;
+    font-size: 12px;
     text-decoration: none;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+h1 {
+    color: #181818;
+    font-size: 18px;
+    font-weight: bolder;
 }
 
 h2 {
     font-size: 14px;
+    line-height: 21px;
 }
 
 small {
@@ -451,4 +460,37 @@ main > * {
 
 .projects > div:nth-child(2) img{
     margin-bottom: 15px;
+}
+
+/* skills */
+
+.skills {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 30px;
+}
+
+.skills > div {
+    
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.skills > div > div {
+    border: 1px solid #F4F4F4;
+    border-radius: 6px;
+    padding: 14px 20px;
+}
+
+.skills > div > div > div {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.skills > div > div > div > span {
+    color: #0275B1
 }
