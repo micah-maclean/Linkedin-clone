@@ -16,6 +16,8 @@ ul{
 }
 
 a{
+    color: #0275B1;
+    width: fit-content;
     text-decoration: none;
 }
 
@@ -183,12 +185,10 @@ header > div:last-of-type > img {
 
 footer {
     background: #F7F9FB;
-    bottom: 0;
     display: flex;
     gap: 65px;
     height: 215px;
     padding: 35px 130px 0 130px;
-    position: absolute;
     width: 100vw;
 }
 
@@ -381,4 +381,35 @@ main > * {
     height: 16px;
     width: 16px;
     margin-right: 8px;
+}
+
+/* About */
+
+.about div:first-child button {
+    background: #FFFFFF;
+    border: 1px solid #E7E7E7;
+    color: #181818;
+    cursor: pointer;
+    font-size: 12px;
+    height: 40px;
+    Line-height: 11.48px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 240px;
+}
+
+.about div:first-child button:hover {
+    background: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
+    color: white;
+    height: 50px;
+}
+
+.about div:last-child {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 200px;
+    padding: 36px 30px;
+    width: 100%;
 }
