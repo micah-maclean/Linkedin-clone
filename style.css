@@ -6,9 +6,17 @@
     box-sizing: border-box;
 }
 
+:root {
+    --light-grey: #F4F4F4;
+    --grey: #E5E5E5;
+    --blue: #0275B1;
+    --blue-gradient: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
+}
+
+
 body{
     font-family: 'Montserrat', sans-serif;
-    background-color: #E5E5E5;
+    background-color: var(--light-grey);
 }
 
 ul{
@@ -62,23 +70,27 @@ small {
     max-width: 1200px;
 }
 
-.button-md {
-    border: 1px solid #0275B1;
-    border-radius: 4px;
-    color: #0275B1;
-    background-color: white;
+.btn {
     cursor: pointer;
+    text-transform: uppercase;
     font-size: 12px;
-    font-weight: bold;
-    height: 32px;
-    line-height: 11px;
     text-align: center;
+    padding: 0 16px;
+    height: 32px;
     width: 170px;
+    border: none;
+    border-radius: 4px;
+}
+ 
+.btn-blue {
+    background: var(--blue-gradient);
+    color: white;
 }
 
-.contact-button {
-    background: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
-    color: white;
+.btn-white {
+    background-color: white;
+    color: var(--blue);
+    border: 1px solid var(--blue);
 }
 
 header {
@@ -106,12 +118,11 @@ header > * {
     /* header items size */
     height: 80px;
 
-    border-right: 1px solid #F4F4F4;
+    border-right: 1px solid var(--light-grey);
 }
 
 header > a {
     padding: 0 40px;
-    /* width: 130px;    */
 }
 
 header ul{
@@ -263,19 +274,9 @@ footer div:last-of-type span, footer form label{
     margin-bottom: 25px;
 }
 
-footer div:last-of-type div button {
-    box-sizing: border-box;
-    border: 1px solid #0275B1;
-    border-radius: 4px;
-    color: #0275B1;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: bold;
-    height: 32px;
-    line-height: 11px;
-    padding-left: 15px;
+footer .btn {
     text-align: left;
-    width: 170px;
+    font-weight: bold;
 }
 
 footer div:last-of-type div:first-of-type button:first-of-type {
@@ -327,6 +328,11 @@ main > * {
     box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
     padding: 30px;
     margin-bottom: 30px;
+}
+
+
+.profile {
+    padding: 0;
 }
 
 .profile > div:first-child{
@@ -405,27 +411,21 @@ main > * {
 
 /* About */
 
-.about > div:first-child button {
-    background: #FFFFFF;
+.about > div:first-child > .btn {
+    background: white;
     border: 1px solid #E7E7E7;
     color: #181818;
-    cursor: pointer;
-    font-size: 12px;
     height: 40px;
-    Line-height: 11.48px;
-    text-align: center;
-    text-transform: uppercase;
     width: 240px;
 }
 
-.about div:first-child button:hover {
+.about > div:first-child > .btn:hover {
     background: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
     color: white;
     height: 50px;
 }
 
 .about div:last-child {
-    background: white;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -436,11 +436,9 @@ main > * {
 /* projects */
 
 .projects {
-    background-color: white;
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding: 30px;
 }
 
 .projects div:first-child {
@@ -465,11 +463,9 @@ main > * {
 /* skills */
 
 .skills {
-    background: white;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 30px;
 }
 
 .skills > div {
@@ -502,7 +498,6 @@ main > * {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 30px;
 }
 
 .experience > div{
@@ -512,7 +507,7 @@ main > * {
 }
 
 .experience > div:first-of-type {
-    border-bottom: 1px solid #F4F4F4;
+    border-bottom: 1px solid var(--light-grey);
     padding-bottom: 25px;
 }
 
@@ -528,7 +523,7 @@ main > * {
 }
 
 .experience > div > div > div > div:last-child > small:last-child {
-    color: #0275B1;
+    color: var(--blue);
 }
 
 /* education */
@@ -538,7 +533,6 @@ main > * {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 30px;
 }
 
 .education > div {
@@ -559,28 +553,32 @@ main > * {
     gap: 5px
 }
 
-aside > * {
+/* Aside */
+aside > section {
     background-color: white;
     padding: 25px 30px;
     margin-bottom: 20px;
 }
 
-.aside-title {
+aside > section > div:first-child {
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
-    border-bottom: 1px solid #F4F4F4;
+    border-bottom: 1px solid var(--light-grey);
 }
 
+/* Dashboard */
 .dashboard > div:last-child > div:not(:last-child) {
     margin-bottom: 20px;
 }
 
 .dashboard > div:last-child > div > span {
     font-size: 52px;
-    color: #0275B1;
+    color: var(--blue);
 }
 
+
+/* Visitors */
 .visitors > div:last-child > div:not(:last-child){
     margin-bottom: 15px;
 }
@@ -589,3 +587,4 @@ aside > * {
     display: flex;
     gap: 15px;
 }
+
