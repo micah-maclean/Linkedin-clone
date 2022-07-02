@@ -44,6 +44,7 @@ h2 {
 
 h3 {
     font-size: 12px;
+     
 }
 
 small {
@@ -331,9 +332,9 @@ main > * {
 }
 
 
-.profile {
+.profile { 
     padding: 0;
-}
+}  
 
 .profile > div:first-child{
     background: url(./images/backgroundProfile.png);
@@ -588,3 +589,178 @@ aside > section > div:first-child {
     gap: 15px;
 }
 
+
+/* Segunda tela */
+
+.new-post {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
+    padding: 30px 30px 0 30px;
+    margin-bottom: 30px;
+}
+
+.new-post h3 {
+    border-bottom: 1px solid #F4F4F4;
+    padding-bottom: 20px;
+    text-transform: uppercase; 
+}
+
+.new-post form {
+    display: flex;
+    align-items: center;
+}
+
+.new-post form input {
+    border: none;
+    padding: 29px 0  30px;
+    width: 100%;
+}
+
+.new-post form input::placeholder {
+    color: #CECECE;
+    font-size: 18px;
+}
+
+.new-post form input:focus {
+    outline: none;
+}
+
+/* Separador */
+
+
+.feed section div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.feed section div:nth-child(2)::after,
+.feed section div:nth-child(2)::before{
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #E7E7E7;
+}
+
+.feed section div:nth-child(2)::before{
+    border-right: 1px;
+}
+
+.feed section div:nth-child(2)::after{
+    margin-left: 1px;
+}
+.feed section div span {
+    color: var(--blue);
+}
+
+/* Post */
+
+.post {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
+    padding-top: 15px;
+    margin-bottom: 30px;
+}
+
+.post > div:first-child{
+    align-items: center;
+    border-bottom: 1px solid #F4F4F4;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 15px 15px ;
+}
+
+.post > div:first-child span {
+    color: var(--blue);
+}
+
+.post > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.post > div:nth-child(2) > div:first-of-type {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+} 
+
+.post > div:nth-child(2) > div:first-of-type img {
+    height: 52px;
+    width: 52px;
+}
+
+.post > div:nth-child(2) > div:first-of-type div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start  ;
+}
+
+.post > div:nth-child(2) p {
+    background-clip: text;
+    background: linear-gradient(180deg, #181818 0%, rgba(24, 24, 24, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 14px;
+    text-align: left;
+}
+
+.post > div:nth-child(2) a{
+    text-align: left ;
+    width: 100%;
+}
+
+.post > div:nth-child(3) {
+    align-items: center;
+    border-top: 1px solid #F4F4F4;
+    display: flex;
+    height: 49px;  
+    justify-content: space-between;
+    padding: 0 80px 0 30px;
+    margin: auto 0; 
+}   
+
+
+.post > div:nth-child(3) > div {
+    display: flex;
+    gap: 82px;
+} 
+
+.post > div:nth-child(3) > div > p:first-child::before{
+    content: '';
+    display: inline-block;
+    background: center url(./images/like.png) no-repeat;
+    background-size: 16px;
+    height: 16px;
+    width: 16px;
+    padding-right: 8px;
+    margin-left: 8px;
+}
+
+.post > div:nth-child(3) > div > p:last-child::before {
+    content: '';
+    display: inline-block;
+    background: center url(./images/comment.png) no-repeat;
+    background-size: 16px;
+    height: 16px;
+    width: 16px;
+    padding-right: 8px;
+    margin-left: 8px;
+}
+
+.post > div:nth-child(3) > p:last-of-type:before {
+    content: '';
+    display: inline-block;
+    background: center url(./images/share.png) no-repeat;
+    background-size: 16px;
+    height: 16px;
+    width: 16px;
+    padding-right: 8px;
+    margin-left: 8px;
+}
