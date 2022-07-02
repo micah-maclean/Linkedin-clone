@@ -47,6 +47,11 @@ h3 {
      
 }
 
+p {
+    font-size: 14px;
+    line-height: 150%;
+}
+
 small {
     font-size: 10px;
     color:#181818;
@@ -227,7 +232,7 @@ footer {
     gap: 65px;
     height: 215px;
     padding: 35px 130px 0 130px;
-    width: 100vw;
+    width: 100%;
 }
 
 footer div:first-child p{
@@ -252,7 +257,7 @@ footer div:nth-child(2) span {
 
 footer div:nth-child(2) nav {
     display: flex;
-    gap: 100px;
+    gap: 70px;
 }
 
 footer div:nth-child(2) nav ul{
@@ -326,7 +331,7 @@ footer form select:focus {
 }
 
 /* Profile */
-main > * {
+.profile > div:nth-child(2), .about > div:last-child, .projects, .skills, .experience, .education {
     background-color: white;
     border-radius: 4px;
     box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
@@ -334,19 +339,14 @@ main > * {
     margin-bottom: 30px;
 }
 
-
-.profile { 
-    padding: 0;
-}  
-
 .profile > div:first-child{
-    background: url(./images/backgroundProfile.png);
-    width: 100%;
-    height: 180px;
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
     align-items: flex-start;
+    background: url(./images/backgroundProfile.png);
+    display: flex;
+    height: 180px;
+    justify-content: space-between;
+    padding: 20px 30px;
+    width: 100%;
 }
 
 .profile > div:first-child > div {
@@ -355,9 +355,28 @@ main > * {
     gap: 10px;
 }
 
-.profile > div:first-child button {
+.profile > div:first-child  button {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 10px 30px rgba(113, 123, 133, 0.05);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    display: flex;
     height: 36px;
+    justify-content: center;
     padding: 12px;
+    width: 36px;
+}
+
+.profile > div:first-child > div:last-child > button:first-child{
+    width: 132px;
+}
+
+.profile > div:first-child > div:last-child > button:first-child img  {
+    height: 16px;
+    margin-right: 10px;
+    width: 16px;
 }
 
 .profile > div:nth-child(2) {
@@ -413,7 +432,17 @@ main > * {
     margin-right: 8px;
 }
 
+.profile > div:nth-child(2) > div > div:last-child {
+    display: flex;
+    gap: 15px;
+}
+
 /* About */
+
+.about > div:first-child {
+    display: flex;
+    align-items: flex-end;
+}
 
 .about > div:first-child > .btn {
     background: white;
@@ -427,6 +456,7 @@ main > * {
     background: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
     color: white;
     height: 50px;
+    margin-top: -10px;
 }
 
 .about div:last-child {
