@@ -9,28 +9,32 @@
         width: 220px;
     }
 
-    .groups > div:last-child > div > img {
+    .groups > div:last-child > div > img, .visitors > div:last-child > a > img {
         height: 52px;
         width: 52px;
     }
 
-    .groups > div:last-child > div > h2{
+    .groups > div:last-child > div > h2, .visitors > div:last-child > a > h2 {
         font-size: 10px;
     }
 
-    .articles > div:last-child > div > img {
-        height: 52px;
-        width: 80px;
-    }
-
-    .articles > div:last-child  div  {
+    .articles > div:last-child > div, .courses > div:last-child > div {
         text-align: center;
         align-items: center;
         flex-direction: column;
     }
     
-    .articles > div:last-child > a{
+    .articles > div:last-child > a, .courses > div:last-child > a {
         font-size: 11px;
+    }
+
+    header > .container > *:nth-child(4) {
+        width: 90px;
+        padding: 0;
+    }
+
+    header > .container > *:nth-child(4) > div:last-child {
+        display: none;
     }
 
     footer div:nth-child(2) nav {
@@ -87,6 +91,16 @@
         padding-right: 5px;
         color: var(--blue);
         cursor: pointer;
+    }
+
+    .dashboard > div:last-child {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .courses > div:last-child > div {
+        flex-direction: row;
+        text-align: start;
     }
 
     footer {

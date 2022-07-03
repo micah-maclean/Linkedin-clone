@@ -13,6 +13,9 @@
     --blue-gradient: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
 }
 
+html {
+    overflow-x: hidden; 
+}
 
 body{
     font-family: 'Montserrat', sans-serif;
@@ -151,6 +154,17 @@ header > .container > *:last-child {
     height: 80px;
 }
 
+header > .container > nav > ul > li:nth-child(4) > a > span::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background: center url(./images/oneMessage.png);
+    margin-top: -40px;
+    margin-left: -14px;
+    height: 16px;
+    width: 16px;
+}
+
 header > .container > *:nth-child(2) img {
     width: 24px;
     height: 24px;
@@ -184,6 +198,7 @@ header  > .container > *:nth-child(4) {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     padding: 0 30px;
     width: 330px;
@@ -224,7 +239,7 @@ footer {
     justify-content: space-between;
     gap: 65px;
     height: 100%;
-    padding: 35px 130px 0 130px;
+    padding: 35px 130px;
     width: 100%;
 }
 
@@ -375,7 +390,6 @@ footer form select:focus {
 .profile > div:nth-child(2) {
     display: flex;
     gap: 24px;
-    height: 180px;
     padding: 24px;
 }
 
@@ -418,7 +432,6 @@ footer form select:focus {
     content: '';
     display: inline-block;
     background: center url(./images/location.png);
-    /* color: linear-gradient(180deg, #D8C281 0%, #AC9B69 100%); */
     background-size: 16px;
     height: 16px;
     width: 16px;
@@ -431,7 +444,6 @@ footer form select:focus {
 }
 
 /* About */
-
 .about > div:first-child {
     display: flex;
     align-items: flex-end;
@@ -440,7 +452,6 @@ footer form select:focus {
 .about > div:first-child > .btn {
     background: white;
     border: 1px solid #E7E7E7;
-    color: #181818;
     height: 40px;
     width: 240px;
 }
@@ -456,23 +467,16 @@ footer form select:focus {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    height: 200px;
     width: 100%;
 }
 
 /* projects */
-
-.projects {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+.projects > *:not(:last-child) {
+    margin-bottom: 24px;
 }
 
-.projects div:first-child {
-    font-size: 18px;
-}
-
-.projects div:first-child span {
+.projects > h1::after {
+    content: '3 of 12';
     color: #747474;
     margin-left: 16px;
 }
@@ -485,10 +489,10 @@ footer form select:focus {
 
 .projects > div:nth-child(2) img{
     margin-bottom: 15px;
+    width: 100%;
 }
 
 /* skills */
-
 .skills > *:not(:last-child) {
     margin-bottom: 24px;
 }
@@ -516,21 +520,17 @@ footer form select:focus {
 }
 
 /* experience */
-
-.experience{
-    background: white;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+.experience > *:not(:last-child) {
+    margin-bottom: 24px;
 }
 
-.experience > div{
+.experience > div {
     display: grid;
     grid-template-columns: 54px auto;
     gap: 16px;
 }
 
-.experience > div:first-of-type {
+.experience > div:not(:last-child) {
     border-bottom: 1px solid var(--light-grey);
     padding-bottom: 25px;
 }
@@ -551,12 +551,8 @@ footer form select:focus {
 }
 
 /* education */
-
-.education {
-    background: white;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+.education > *:not(:last-child) {
+    margin-bottom: 24px;
 }
 
 .education > div {
@@ -602,25 +598,33 @@ aside > section > div:first-child {
     color: var(--blue);
 }
 
-
-/* Visitors */
-.visitors > div:last-child > div:not(:last-child) {
+/* Visitors & Groups*/
+.visitors > div:last-child > a:not(:last-child), .groups > div:last-child > div:not(:last-child) {
     margin-bottom: 15px;
 }
 
-.visitors > div:last-child > div {
+.visitors > div:last-child > a , .groups > div:last-child > div{
     display: flex;
     gap: 15px;
 }
 
-/* Courses */
-.courses > div:last-child > div:not(:last-child) {
+/* Courses & trending articles*/
+.courses > div:last-child > div:not(:last-child), .articles > div:last-child > div:not(:last-child) {
     margin-bottom: 15px;
 }
 
-.courses > div:last-child > div {
+.courses > div:last-child > div, .articles > div:last-child > div{
     display: flex;
     gap: 15px;
+}
+
+.courses h2, .articles h2{
+    line-height: 18px;
+}
+
+.courses img, .articles img{
+    width: 80px;
+    height: 52px;
 }
 
 /* Aside Profile */
@@ -646,7 +650,7 @@ aside > section > div:first-child {
     text-align: center;
 } 
 
-.profile-aside > div:last-child  > h2::after {
+.profile-aside > div:last-child > h2::after {
     content: '';
     display: inline-block;
     background: center url(./images/logoGolden.png);
@@ -665,16 +669,6 @@ aside > section > div:first-child {
     width: 100%;
 }
 
-/* Groups */
-.groups > div:last-child > div:not(:last-child) {
-    margin-bottom: 15px;
-}
-
-.groups > div:last-child > div {
-    display: flex;
-    gap: 15px;
-}
-
 /* Hashtag */
 .hashtag > div:last-child {
     display: flex;
@@ -690,18 +684,7 @@ aside > section > div:first-child {
     padding: 8px 10px;
 } 
 
-/* Trending articles */
-.articles > div:last-child > div:not(:last-child) {
-    margin-bottom: 15px;
-}
-
-.articles > div:last-child > div {
-    display: flex;
-    gap: 15px;
-}
-
 /* Segunda tela */
-
 .new-post {
     background-color: white;
     border-radius: 4px;
@@ -743,7 +726,6 @@ aside > section > div:first-child {
 }
 
 /* Separador */
-
 .post > div:first-child {
     display: flex;
     align-items: center;
@@ -776,7 +758,6 @@ aside > section > div:first-child {
 }
 
 /* Post */
-
 .post > div:not(:first-child) {
     background-color: white;
     border-radius: 4px;
@@ -852,7 +833,6 @@ aside > section > div:first-child {
     margin-top: 20px;
     padding: 0 30px;
 }   
-
 
 .post > div > div:nth-child(3) > div {
     display: flex;
