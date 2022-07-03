@@ -227,8 +227,9 @@ header > div:last-of-type > img {
 footer {
     background: #F7F9FB;
     display: flex;
+    justify-content: space-between;
     gap: 65px;
-    height: 215px;
+    height: 100%;
     padding: 35px 130px 0 130px;
     width: 100%;
 }
@@ -633,7 +634,8 @@ aside > section > div:first-child {
 
 /* Aside Profile */
 .profile-aside > div:first-child {
-    background: center url(./images/profile-aside.png);
+    background: center url(./images/profile-aside.png) no-repeat ;
+    background-size: 100%;
     width: 290px;
     height: 120px;
     margin: -25px -30px 0 -30px;
@@ -661,6 +663,10 @@ aside > section > div:first-child {
     height: 12px;
     width: 12px;
     margin-left: 4px;
+}
+
+.see-more {
+    display: none;
 }
 
 /* New article */
