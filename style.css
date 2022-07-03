@@ -31,8 +31,11 @@ a{
     width: fit-content;
 }
 
-h1 {
+h1, h2, h3, p, small{
     color: #181818;
+}
+
+h1 {
     font-size: 18px;
     font-weight: bolder;
 }
@@ -43,8 +46,7 @@ h2 {
 }
 
 h3 {
-    font-size: 12px;
-     
+    font-size: 12px;  
 }
 
 p {
@@ -54,12 +56,15 @@ p {
 
 small {
     font-size: 10px;
-    color:#181818;
     line-height: 15px;
 }
 
-.lighter {
-    color: rgba(24, 24, 24, 0.2);
+input::placeholder {
+    color: #CECECE;
+}
+
+input:focus {
+    outline: none;
 }
 
 .green {
@@ -102,34 +107,31 @@ small {
     border-bottom: 3px solid var(--blue);
 }
 
-
 /* Header */
 header {
+    background-color: white;
+}
+
+header > .container {
+    max-width: 1400px;
+    margin: 0 auto;
     /* header flex */
     display: flex;
     justify-content: flex-start;
-
-    /* header font */
-    font-size: 12px;
+    gap: 0;
     font-weight: bold;
-    background-color: white;
-    text-transform: uppercase;
-    line-height: 11.48px;
 }
 
-header > * {
-    /* header items flex */
+header > .container > * {
     display: flex;
     align-items: center;
-
-    /* header items size */
     height: 80px;
-
     border-right: 1px solid var(--light-grey);
 }
 
-header > a {
+header > .container > *:first-child {
     padding: 0 40px;
+    width: fit-content;
 }
 
 header ul{
@@ -137,7 +139,8 @@ header ul{
     padding: 0 20px;
 }
 
-header ul li a {
+header > .container > nav > ul > li > a, 
+header > .container > *:last-child {
     color: black;
     display: flex;
     flex-direction: column;
@@ -148,78 +151,69 @@ header ul li a {
     height: 80px;
 }
 
-header ul li a img {
+header > .container > *:nth-child(2) img {
     width: 24px;
     height: 24px;
 }
 
-header form {
+header  > .container > *:nth-child(3) {
     display: flex;
     align-items: center;
     height: 80px;
     width: 367px;
 }
 
-header form input {
+header  > .container > *:nth-child(3) input {
     border: none;
-    height: 100%;
     padding-left: 70px;
     width: 100%;
+    height: 80px;
 }
 
-header form input::placeholder {
-    color: #CECECE
+header > .container > *:nth-child(3) input::placeholder {
+    font-size: 16px;
 }
 
-header form input:focus {
-    outline: none;
-}
-
-header form img {
+header > .container > *:nth-child(3) img {
     position: absolute;
     margin: 0 25px 0 33px;
 }
 
-header > div:first-of-type {
+header  > .container > *:nth-child(4) {
+    color: #181818;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    width: 330px;
-    height: 80px;
     padding: 0 30px;
+    width: 330px;
 }
 
-header > div:first-of-type > a > img {
+header > .container > *:nth-child(4) > img {
     width: 42px;
     height: 42px;
 }
 
-header > div:first-of-type > div {
+header > .container > *:nth-child(4) > div {
     display: flex;
     flex-direction: column;
     gap: 11px;
 }
 
-header > div:last-of-type {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 90px;
-}
-
-header > div:first-of-type  .lighter {
+header > .container > *:nth-child(4) > div > h3:first-child:after {
+    content: 'YOU';
+    color: #18181833;
     margin-left: 10px;
 }
 
-header > div:last-of-type {
-    cursor: pointer;
+header > .container > *:nth-child(4) > div > h3:last-child {
+    text-transform: none;
+    color: #747474;
 }
 
-header > div:last-of-type > img {
-    width: 24px;
-    height: 24px;
+header > .container > *:nth-child(4) > div > h3:last-child > span{
+    color: #02B033;
+    margin-left: 4px;
 }
 
 /* Footer */
@@ -495,26 +489,23 @@ footer form select:focus {
 
 /* skills */
 
-.skills {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+.skills > *:not(:last-child) {
+    margin-bottom: 24px;
 }
 
-.skills > div {
-    
+.skills > div:nth-child(2) {
     display: grid;
     gap: 5px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.skills > div > div {
+.skills > div:nth-child(2) > div {
     border: 1px solid #F4F4F4;
     border-radius: 6px;
     padding: 14px 20px;
 }
 
-.skills > div > div > div {
+.skills > div:nth-child(2) > div > div {
     display: flex;
     justify-content: space-between;
     
@@ -737,12 +728,7 @@ aside > section > div:first-child {
 }
 
 .new-post form input::placeholder {
-    color: #CECECE;
     font-size: 18px;
-}
-
-.new-post form input:focus {
-    outline: none;
 }
 
 .new-post > form > div {
