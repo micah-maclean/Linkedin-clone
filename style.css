@@ -102,10 +102,11 @@ small {
     border-bottom: 3px solid var(--blue);
 }
 
+
+/* Header */
 header {
     /* header flex */
     display: flex;
-    align-items: center;
     justify-content: flex-start;
 
     /* header font */
@@ -114,9 +115,6 @@ header {
     background-color: white;
     text-transform: uppercase;
     line-height: 11.48px;
-    
-    /* header size */
-    height: 80px;
 }
 
 header > * {
@@ -598,6 +596,7 @@ aside > section > div:first-child {
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
+    margin-bottom: 20px;
     border-bottom: 1px solid var(--light-grey);
 }
 
@@ -613,7 +612,7 @@ aside > section > div:first-child {
 
 
 /* Visitors */
-.visitors > div:last-child > div:not(:last-child){
+.visitors > div:last-child > div:not(:last-child) {
     margin-bottom: 15px;
 }
 
@@ -622,6 +621,87 @@ aside > section > div:first-child {
     gap: 15px;
 }
 
+/* Courses */
+.courses > div:last-child > div:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.courses > div:last-child > div {
+    display: flex;
+    gap: 15px;
+}
+
+/* Aside Profile */
+.profile-aside > div:first-child {
+    background: center url(./images/profile-aside.png);
+    width: 290px;
+    height: 120px;
+    margin: -25px -30px 0 -30px;
+}
+
+.profile-aside > div:last-child img {
+    margin-top: -50px;
+    height: 100px;
+    width: 100px;
+}
+
+.profile-aside > div:last-child {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+} 
+
+.profile-aside > div:last-child  > h2::after {
+    content: '';
+    display: inline-block;
+    background: center url(./images/logoGolden.png);
+    background-size: 12px;
+    height: 12px;
+    width: 12px;
+    margin-left: 4px;
+}
+
+/* New article */
+.new-article > .btn {
+    width: 100%;
+}
+
+/* Groups */
+.groups > div:last-child > div:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.groups > div:last-child > div {
+    display: flex;
+    gap: 15px;
+}
+
+/* Hashtag */
+.hashtag > div:last-child {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.hashtag > div:last-child > a {
+    border-radius: 4px;
+    background-color: #E9F0F8;
+    color: #181818;
+    height: 32px;
+    padding: 8px 10px;
+} 
+
+/* Trending articles */
+.articles > div:last-child > div:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.articles > div:last-child > div {
+    display: flex;
+    gap: 15px;
+}
 
 /* Segunda tela */
 
