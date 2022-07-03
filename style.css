@@ -752,41 +752,40 @@ aside > section > div:first-child {
 
 /* Separador */
 
-.feed > section > div:nth-child(2) {
+.post > div:first-child {
     display: flex;
     align-items: center;
     text-align: center;
     margin-bottom: 32px;
 }
 
-.feed > section > div:nth-child(2)::after,
-.feed > section > div:nth-child(2)::before{
+.post > div:first-child:after,
+.post > div:first-child::before{
     content: '';
     flex: 1;
     border-bottom: 1px solid #E7E7E7;
 }
 
-.feed > section > div:nth-child(2)::before{
+.post > div:first-child::before{
     border-right: 1px;
 }
 
-.feed > section > div:nth-child(2)::after{
+.post > div:first-child::after{
     margin-left: 1px;
 }
-.feed > section > div span {
+.post > div:first-child span {
     padding-right: 5px;
     color: var(--blue);
     cursor: pointer;
 }
 
-.feed > section > div > img {
+.post > div:first-child > img {
     cursor: pointer;
 }
 
 /* Post */
 
-
-.post > div {
+.post > div:not(:first-child) {
     background-color: white;
     border-radius: 4px;
     box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
@@ -819,19 +818,19 @@ aside > section > div:first-child {
     margin-top: 15px;
 }
 
-.post > div > div:nth-child(2) > div:first-of-type {
+.post > div > div:nth-child(2) > a {
     cursor: pointer;
     display: flex;
     gap: 15px;
     width: 100%;
 } 
 
-.post > div > div:nth-child(2) > div:first-of-type img {
+.post > div > div:nth-child(2) > a img {
     height: 52px;
     width: 52px;
 }
 
-.post > div > div:nth-child(2) > div > div {
+.post > div > div:nth-child(2) > a > div {
     display: flex;
     flex-direction: column;
     align-items: flex-start  ;
@@ -869,22 +868,22 @@ aside > section > div:first-child {
     height: auto;
 } 
 
-.post > div > div:nth-child(3) p {
+.post > div > div:nth-child(3) h3 {
     align-items: center;
     display: flex;
 }
 
-.post > div > div:nth-child(3) > div > p:first-child {
+.post > div > div:nth-child(3) > div > h3:first-child {
     margin-right: 10px
 }
 
-.post > div > div:nth-child(3) > div > p:last-child {
+.post > div > div:nth-child(3) > div > h3:last-child {
     border-right: 1px solid var(--light-grey);
     border-left:  1px solid var(--light-grey);
     padding: 15px 30px 15px 20px;
 }
 
-.post > div > div:nth-child(3) > div > p:first-child::before{
+.post > div > div:nth-child(3) > div > h3:first-child::before{
     content: ''; 
     cursor: pointer;
     display: inline-block;
@@ -896,12 +895,12 @@ aside > section > div:first-child {
     margin-left: 8px;
 }
 
-.post > div:nth-child(2) > div:nth-child(3) > div > p:first-child::before,
-.post > div:nth-child(3) > div:nth-child(3) > div > p:first-child::before {
+.post > div:nth-child(3) > div:nth-child(3) > div > h3:first-child::before,
+.post > div:nth-child(4) > div:nth-child(3) > div > h3:first-child::before {
     background: center url(./images/likeBlue.png) no-repeat;
 }
 
-.post > div > div:nth-child(3) > div > p:last-child::before {
+.post > div:not(:first-child) > div:nth-child(3) > div > h3:last-child::before {
     content: '';
     cursor: pointer;
     background: center url(./images/comment.png) no-repeat;
@@ -913,11 +912,11 @@ aside > section > div:first-child {
     width: 16px;
 }
 
-.post > div:nth-child(3) > div:nth-child(3) > div > p:last-child::before {
+.post > div:nth-child(4) > div:nth-child(3) > div > h3:last-child::before {
     background: center url(./images/commentBlue.png) no-repeat;
 }
 
-.post > div > div:nth-child(3) > p:last-of-type:before {
+.post > div:not(:first-child) > div:nth-child(3) > h3:last-of-type:before {
     content: '';
     cursor: pointer;
     display: inline-block;
@@ -929,15 +928,16 @@ aside > section > div:first-child {
     margin-left: 8px;
 }
 
-.post > div > div:nth-child(3) > p {
+.post > div:not(:first-child) > div:nth-child(3) > h3 {
     border-left:  1px solid var(--light-grey);
     padding: 15px 0 15px 20px;
 }
-.post > div > div:nth-child(3) > p:last-of-type {
+
+.post > div:not(:first-child) > div:nth-child(3) > h3:last-of-type {
     cursor: pointer;
 }
 
-.post > div:nth-child(3) > div:nth-child(2) > div:not(:first-child) > div{
+.post > div:nth-child(4) > div:nth-child(2) > div:not(:first-child) > div{
     align-items: center;
     background: #E9F0F8;
     border-radius: 4px;
@@ -949,12 +949,12 @@ aside > section > div:first-child {
     padding: 20px;
 }
 
-.post > div:nth-child(3) > div:nth-child(2) > div:not(:first-child) > div > div {
+.post > div:nth-child(4) > div:nth-child(2) > div:not(:first-child) > div > div {
     display: flex;
     flex-direction: row;
     gap: 15px;
 }
 
-.post > div:nth-child(3) > div:nth-child(2) > div:not(:first-child) > div > img {
+.post > div:nth-child(4) > div:nth-child(2) > div:not(:first-child) > div > img {
     cursor: pointer;
 }
