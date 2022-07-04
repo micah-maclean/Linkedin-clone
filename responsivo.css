@@ -106,8 +106,8 @@
     header > .container a{
         max-width: 60px;
     }
-    
-    header > .container > *:nth-child(2) a > span {
+
+    header > .container  a > span {
         display: none;
     }
 
