@@ -112,8 +112,14 @@
     }
 
     footer {
-        flex-direction: column;   
+        flex-direction: column;  
+        gap: 20px; 
     }    
+
+    footer div:first-child {
+        display: flex;
+        gap: 10px
+    }
 }
 
 @media(max-width: 768px) {

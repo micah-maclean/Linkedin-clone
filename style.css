@@ -586,6 +586,7 @@ aside > section > div:first-child {
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: 1px solid var(--light-grey);
+    text-transform: uppercase;
 }
 
 /* Dashboard */
@@ -598,7 +599,7 @@ aside > section > div:first-child {
     color: var(--blue);
 }
 
-/* Visitors & Groups*/
+/* Visitors & Groups*/ 
 .visitors > div:last-child > a:not(:last-child), .groups > div:last-child > div:not(:last-child) {
     margin-bottom: 15px;
 }
@@ -682,6 +683,7 @@ aside > section > div:first-child {
     color: #181818;
     height: 32px;
     padding: 8px 10px;
+    text-transform: none;
 } 
 
 /* Segunda tela */
@@ -807,9 +809,10 @@ aside > section > div:first-child {
     display: flex;
     flex-direction: column;
     align-items: flex-start  ;
+    justify-content: center;
 }
 
-.post > div:first-child > div:nth-child(2) > p {
+.post > div:nth-child(2) > div:nth-child(2) > p {
     background-clip: text;
     background: linear-gradient(180deg, #181818 0%, rgba(24, 24, 24, 0) 100%);
     -webkit-background-clip: text;
@@ -903,6 +906,7 @@ aside > section > div:first-child {
 .post > div:not(:first-child) > div:nth-child(3) > h3 {
     border-left:  1px solid var(--light-grey);
     padding: 15px 0 15px 20px;
+    text-transform: uppercase;
 }
 
 .post > div:not(:first-child) > div:nth-child(3) > h3:last-of-type {
