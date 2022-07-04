@@ -103,6 +103,14 @@
         text-align: start;
     }
 
+    header > .container a{
+        max-width: 60px;
+    }
+    
+    header > .container > *:nth-child(2) a > span {
+        display: none;
+    }
+
     footer {
         flex-direction: column;   
     }    
@@ -113,6 +121,21 @@
         grid-template-columns: 100%;
     }
 
+    .profile > div:last-child {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile > div:last-child img{ 
+        margin-top: -110px;
+    }
+
+    .projects >  div:nth-child(2), .skills > div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+    }
+
+
     footer {
         padding: 0;
     }
@@ -120,6 +143,11 @@
 }
 
 @media(max-width: 576px) { 
+    .profile > div:last-child > div > div:first-child {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .new-post > form > div > img {
         width: 20px;
         height: 20px;
